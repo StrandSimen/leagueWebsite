@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid #ffd700;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  color: #b8d4ff;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.125rem;
+}
+
+.app-main {
+  flex: 1;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.action-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 450px;
+}
+
+.generate-button {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1e3a5f;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.generate-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+.generate-button:active {
+  transform: translateY(-1px);
+}
+
+.game-plan {
+  margin-top: 3rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-plan-title {
+  text-align: center;
+  color: #ffd700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.players-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.app-footer p {
+  margin: 0;
+  color: #b8d4ff;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .generate-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
