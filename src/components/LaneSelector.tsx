@@ -67,13 +67,13 @@ export const LaneSelector = ({
                 }`}
                 onClick={() => toggleLane(lane)}
                 disabled={!selectedLanes.includes(lane) && selectedLanes.length >= playerCount}
+                title={laneNames[lane]}
               >
                 <img 
                   src={getLaneIcon(lane)} 
                   alt={laneNames[lane]}
                   className="lane-option-icon"
                 />
-                <span className="lane-option-name">{laneNames[lane]}</span>
               </button>
             ))}
           </div>

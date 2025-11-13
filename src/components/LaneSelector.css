@@ -48,21 +48,23 @@
 
 .lane-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .lane-option {
   background: rgba(0, 0, 0, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 1rem;
+  border-radius: 8px;
+  padding: 0.75rem;
   cursor: pointer;
   transition: all 0.3s;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  aspect-ratio: 1;
 }
 
 .lane-option:hover:not(.disabled) {
@@ -83,8 +85,8 @@
 }
 
 .lane-option-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
@@ -92,12 +94,6 @@
 .lane-option.selected .lane-option-icon {
   filter: brightness(0) saturate(100%) invert(77%) sepia(94%) saturate(418%) hue-rotate(1deg) brightness(104%) contrast(104%);
   opacity: 1;
-}
-
-.lane-option-name {
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 600;
 }
 
 .generate-section {
@@ -136,7 +132,8 @@
 
 @media (max-width: 768px) {
   .lane-options {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 100%;
   }
   
   .lane-mode-buttons {
